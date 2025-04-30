@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <title>Angle Invaders</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <script src="jquery-1.9.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="angleinvaders.js"></script>
+
+    <link href="angleinvaders.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body onload="init();">
+    <div id="main_div">
+
+        <div id="frontpage_div">
+            <img src="images/logo.png" style="margin-top:115px;">
+            <br><br>
+            <div class="button2 play" onclick="start_game();"></div>
+        </div>
+
+        <div id="game_div">
+
+            <div id="timer_div"></div>
+            <div id="score_div"></div>
+            <div id="level_div"></div>
+
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <div id="angles"></div>
+
+            <img src="images/playerShip1_green.png" id="player_ship">
+            <img src="images/enemyBlack1.png" id="enemy_ship_0" class="enemy_ship">
+            <img src="images/enemyBlue1.png" id="enemy_ship_1" class="enemy_ship">
+            <img src="images/enemyGreen1.png" id="enemy_ship_2" class="enemy_ship">
+            <img src="images/enemyRed1.png" id="enemy_ship_3" class="enemy_ship">
+
+            <div id="explosion"></div>
+
+            <div id="missile"></div>
+
+            <div id="calculator_div">
+                <table style="position:absolute;top:0px;left:0px;width:159px;height:24px;cursor:pointer;" id="calc_table">
+                    <tr>
+                        <td onclick="calc(7);">7</td>
+                        <td onclick="calc(8);">8</td>
+                        <td onclick="calc(9);">9</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calc(4);">4</td>
+                        <td onclick="calc(5);">5</td>
+                        <td onclick="calc(6);">6</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calc(1);">1</td>
+                        <td onclick="calc(2);">2</td>
+                        <td onclick="calc(3);">3</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calc(0);">0</td>
+                        <td onclick="calc('delete');" colspan="2">DEL</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="shoot_angle" contenteditable></div>
+            <div class="button2 shoot" onclick="check_answer();"></div>
+            <div class="popup_big" id="result_popup"></div>
+
+        </div>
+
+        <div id="greyout"></div>
+
+</body>
+
+</html>
