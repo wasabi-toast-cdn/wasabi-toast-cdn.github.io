@@ -150,7 +150,7 @@ function start_game() {
     level = 0;
     play_sound(3)
     levelup();
-    show_popup("Thank you for playing modded Angle Invaders!", 5000)
+    show_popup("Thank you for playing modded Angle Invaders! \n From The Modder - Jamison", 5000)
 }
 
 var level = 0;
