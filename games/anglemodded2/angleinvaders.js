@@ -373,6 +373,7 @@ function show_angle() {
 function check_answer() {
     if (shooting || !playing) return;
     entered_angle = parseInt($('#shoot_angle').text());
+    showPopup("DEBUG: "+entered_angle, 1000)
     if (Number.isNan(entered_angle) == true) {
         clear_shoot_angle();
         shooting = false;
