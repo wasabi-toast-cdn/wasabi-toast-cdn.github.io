@@ -373,6 +373,7 @@ function show_angle() {
 function check_answer() {
     if (shooting || !playing) return;
     entered_angle = parseInt($('#shoot_angle').text());
+    if (entered_angle == "")
     $('#player_ship,#missile').css('transform', 'rotate(' + (entered_angle - 90) + 'deg)');
     play_sound(0);
 
