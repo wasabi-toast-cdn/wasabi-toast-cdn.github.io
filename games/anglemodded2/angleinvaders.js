@@ -373,13 +373,13 @@ function show_angle() {
 function check_answer() {
     if (shooting || !playing) return;
     entered_angle = parseInt($('#shoot_angle').text());
-    show_Popup("DEBUG: "+entered_angle, 1000)
+    show_popup("DEBUG: "+entered_angle, 1000)
     if (Number.isNan(entered_angle) == true) {
         clear_shoot_angle();
         shooting = false;
         return;
     }
-    show_Popup("DEBUG: "+entered_angle, 1000)
+    show_popup("DEBUG: "+entered_angle, 1000)
     $('#player_ship,#missile').css('transform', 'rotate(' + (entered_angle - 90) + 'deg)');
     play_sound(0);
     $('#missile').css({
