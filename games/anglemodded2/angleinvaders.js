@@ -373,10 +373,13 @@ function show_angle() {
 function check_answer() {
     if (shooting || !playing) return;
     entered_angle = parseInt($('#shoot_angle').text());
-    if (entered_angle == "" || entered_angle == "NaN") return;
     $('#player_ship,#missile').css('transform', 'rotate(' + (entered_angle - 90) + 'deg)');
+    if (Number.isNan(entered_angle)) {
+        clear_shoot_angle();
+        shooting = false;
+        return;
+    }
     play_sound(0);
-
     $('#missile').css({
         top: 430,
         left: 425
